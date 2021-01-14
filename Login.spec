@@ -3,7 +3,7 @@
 block_cipher = None
 
 
-a = Analysis(['Login.py'],
+a = Analysis(['Login.pyw'],
              pathex=['C:\\Users\\Compaq\\Documents\\Ing Software\\Front'],
              binaries=[],
              datas=[],
@@ -30,4 +30,4 @@ exe = EXE(pyz,
           upx=True,
           upx_exclude=[],
           runtime_tmpdir=None,
-          console=True )
+          console=False )

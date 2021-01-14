@@ -1,7 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ee1db75b-e357-46eb-911d-4b1e4438a806" name="Default Changelist" comment="" />
+    <list default="true" id="ee1db75b-e357-46eb-911d-4b1e4438a806" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Login.spec" beforeDir="false" afterPath="$PROJECT_DIR$/Login.spec" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/Login/Analysis-00.toc" beforeDir="false" afterPath="$PROJECT_DIR$/build/Login/Analysis-00.toc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/Login/EXE-00.toc" beforeDir="false" afterPath="$PROJECT_DIR$/build/Login/EXE-00.toc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/Login/PKG-00.pkg" beforeDir="false" afterPath="$PROJECT_DIR$/build/Login/PKG-00.pkg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/Login/PKG-00.toc" beforeDir="false" afterPath="$PROJECT_DIR$/build/Login/PKG-00.toc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/Login/PYZ-00.pyz" beforeDir="false" afterPath="$PROJECT_DIR$/build/Login/PYZ-00.pyz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/Login/PYZ-00.toc" beforeDir="false" afterPath="$PROJECT_DIR$/build/Login/PYZ-00.toc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/Login/warn-Login.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/Login/warn-Login.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/Login/xref-Login.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/Login/xref-Login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/Login.exe" beforeDir="false" afterPath="$PROJECT_DIR$/dist/Login.exe" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,11 +26,25 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Login.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="328">
-              <caret line="35" selection-start-line="35" selection-end-line="35" />
+            <state relative-caret-position="748">
+              <caret line="48" column="61" selection-start-line="48" selection-start-column="61" selection-end-line="48" selection-end-column="61" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Login.pyw">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/User.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3111">
+              <caret line="184" column="21" lean-forward="true" selection-start-line="184" selection-start-column="21" selection-end-line="184" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -46,10 +73,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Medicamentos.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="328">
+            <state relative-caret-position="901">
               <caret line="56" column="47" selection-start-line="56" selection-start-column="47" selection-end-line="56" selection-end-column="47" />
               <folding>
                 <element signature="e#16#30#0" expanded="true" />
@@ -61,7 +88,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Expediente.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
+            <state relative-caret-position="4131">
               <caret line="247" column="29" selection-start-line="247" selection-start-column="29" selection-end-line="247" selection-end-column="29" />
               <folding>
                 <element signature="e#13#27#0" expanded="true" />
@@ -73,7 +100,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Receta.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
+            <state relative-caret-position="3655">
               <caret line="222" column="32" selection-start-line="222" selection-start-column="32" selection-end-line="222" selection-end-column="32" />
               <folding>
                 <element signature="e#9#23#0" expanded="true" />
@@ -85,7 +112,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Dates.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1224">
+            <state relative-caret-position="328">
               <caret line="72" column="22" selection-start-line="72" selection-start-column="22" selection-end-line="72" selection-end-column="22" />
             </state>
           </provider>
@@ -101,7 +128,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -148,6 +175,11 @@
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Compaq\Documents\Ing Software\Front" />
+    </key>
+  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -160,7 +192,28 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Medicamentos">
+  <component name="RunManager" selected="Python.Dates">
+    <configuration name="Dates" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Front" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Dates.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="Expediente" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Front" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -182,7 +235,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="HistorialClinico" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="Login.pyw" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Front" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -194,28 +247,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/HistorialClinico.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Login" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Front" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Login.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Login.pyw" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -289,11 +321,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.Dates" />
+        <item itemvalue="Python.Login.pyw" />
         <item itemvalue="Python.Medicamentos" />
         <item itemvalue="Python.Receta" />
         <item itemvalue="Python.Expediente" />
-        <item itemvalue="Python.Login" />
-        <item itemvalue="Python.HistorialClinico" />
       </list>
     </recent_temporary>
   </component>
@@ -459,15 +491,25 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Recetas.py" />
+    <entry file="file://$PROJECT_DIR$/../Frontt/Projetcs/Projetcs/User.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-272">
+          <caret line="18" column="17" lean-forward="true" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Login.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="35" selection-start-line="35" selection-end-line="35" />
+        <state relative-caret-position="748">
+          <caret line="48" column="61" selection-start-line="48" selection-start-column="61" selection-end-line="48" selection-end-column="61" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Login.pyw">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/Citas.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -489,16 +531,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Dates.py">
+    <entry file="file://$PROJECT_DIR$/Medicamentos.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1224">
-          <caret line="72" column="22" selection-start-line="72" selection-start-column="22" selection-end-line="72" selection-end-column="22" />
+        <state relative-caret-position="901">
+          <caret line="56" column="47" selection-start-line="56" selection-start-column="47" selection-end-line="56" selection-end-column="47" />
+          <folding>
+            <element signature="e#16#30#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Expediente.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
+        <state relative-caret-position="4131">
           <caret line="247" column="29" selection-start-line="247" selection-start-column="29" selection-end-line="247" selection-end-column="29" />
           <folding>
             <element signature="e#13#27#0" expanded="true" />
@@ -508,7 +553,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Receta.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
+        <state relative-caret-position="3655">
           <caret line="222" column="32" selection-start-line="222" selection-start-column="32" selection-end-line="222" selection-end-column="32" />
           <folding>
             <element signature="e#9#23#0" expanded="true" />
@@ -516,13 +561,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Medicamentos.py">
+    <entry file="file://$PROJECT_DIR$/Dates.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="328">
-          <caret line="56" column="47" selection-start-line="56" selection-start-column="47" selection-end-line="56" selection-end-column="47" />
-          <folding>
-            <element signature="e#16#30#0" expanded="true" />
-          </folding>
+          <caret line="72" column="22" selection-start-line="72" selection-start-column="22" selection-end-line="72" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/User.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3111">
+          <caret line="184" column="21" lean-forward="true" selection-start-line="184" selection-start-column="21" selection-end-line="184" selection-end-column="21" />
         </state>
       </provider>
     </entry>
