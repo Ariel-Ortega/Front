@@ -3,6 +3,9 @@ from tkinter import messagebox
 from tkinter import *
 from PIL import ImageTk
 import Citas
+import User
+
+persona = User.User()
 
 #Falta validar campos con el tipo de dato
 ventana = tkinter.Tk()
@@ -53,8 +56,17 @@ def insesion():
     else:
         messagebox.showerror("¡Error!", "Datos no válidos")
 
+def Registrarse():
+    ventana.destroy()
+    import Registro
+
 boton1 = tkinter.Button(text="Entrar", command=insesion,fg="white", bg="grey", font=("Monospaced", 15), activeforeground="grey", cursor="hand2")
 boton1.place(x=940, y=520)
 
+boton2 = tkinter.Button(text="Regístrarse", command=Registrarse, fg="grey", bg="white", font=("Monospaced", 12, "italic"), activeforeground="grey", cursor="hand2", relief="flat", overrelief="flat")
+boton2.place(x=915, y=443)
+
+boton3 = tkinter.Button(text="Olvidé mi contraseña", fg="grey", bg="white", font=("Monospaced", 12, "italic"), activeforeground="grey", cursor="hand2", relief="flat", overrelief="flat")
+boton3.place(x=888, y=470)
 
 ventana.mainloop()

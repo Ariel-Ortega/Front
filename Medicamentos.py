@@ -4,6 +4,7 @@ import tkinter
 from tkinter import messagebox
 from tkinter import *
 import time
+from PIL import ImageTk
 
 def Medicamentos():
     # Creación de la ventana en tamaño completo
@@ -18,6 +19,11 @@ def Medicamentos():
     etiqueta = tkinter.Label(ventanaMed, text="Medicamentos")
     etiqueta.pack()
     etiqueta.config(font=("Arial", 30, "bold"), fg="white", bg="#0c3a56")
+
+    #Imagen de fondo
+    fondo = ImageTk.PhotoImage(file="BMedicamentos.jpg")
+    lblFondo = Label(ventanaMed, image=fondo)
+    lblFondo.place(x=0, y=0, relwidth=1, relheight=1.3)
 
     # TABLA DE MEDICAMENTOS
     # Marco para colocar la tabla
@@ -65,8 +71,8 @@ def Medicamentos():
     marco_botonesMed = Frame(bg="#0c3a56")
     marco_botonesMed.place(x=10, y=40, width=300, height=615)
 
-    marco_botonSalirM = Frame(bg="#0c3a56")
-    marco_botonSalirM.place(x=1080, y=570, width=250, height=100)
+    marco_botonSalirM = Frame(bg="white")
+    marco_botonSalirM.place(x=1080, y=570, width=190, height=80)
 
     # Creación de los botones
 

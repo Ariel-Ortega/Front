@@ -56,5 +56,7 @@ def insesion():
 boton1 = tkinter.Button(text="Entrar", command=insesion,fg="white", bg="grey", font=("Monospaced", 15), activeforeground="grey", cursor="hand2")
 boton1.place(x=940, y=520)
 
+boton2 = tkinter.Button(text="Regístrarse", fg="white", bg="grey", font=("Monospaced", 15), activeforeground="grey", cursor="hand2")
+boton2.place(x=940, y=510)
 
 ventana.mainloop()

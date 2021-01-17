@@ -87,10 +87,10 @@ def Receta():
     c_DiagnosticoRe = tkinter.Entry(marco_camposRe, font=("Calibri light", 15), bg="light blue")
     c_DiagnosticoRe.place(x=0, y=100, width=500, height=35)
 
-    c_TratamientoRe = tkinter.Text(marco_camposRe, font=("Calibri light", 15), bg="light blue", width=50, height=20)# Cambio Entry por Text para aumentar el espacio de la caja
+    c_TratamientoRe = tkinter.Text(marco_camposRe, font=("Calibri light", 15), bg="light blue", width=50, height=20, wrap=WORD)# Cambio Entry por Text para aumentar el espacio de la caja
     c_TratamientoRe.place(x=0, y=150, width=500, height=85)
 
-    c_IndicacionesRe = tkinter.Text(marco_camposRe, font=("Calibri light", 15), bg="light blue")
+    c_IndicacionesRe = tkinter.Text(marco_camposRe, font=("Calibri light", 15), bg="light blue", wrap=WORD)
     c_IndicacionesRe.place(x=0, y=250, width=500, height=200)
 
     def ImCamposRec():
@@ -190,7 +190,7 @@ def Receta():
         impresionTexto1.setFillColor(colors.black)
         impresionTexto1.setFont("Courier", 12)
 
-        for line in Texto1.split("\n"):
+        for line in Texto1.split(" "):
             impresionTexto1.textLines(line)
 
         pdf.drawText(impresionTexto1)
