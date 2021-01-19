@@ -190,10 +190,8 @@ def Receta():
         impresionTexto1.setFillColor(colors.black)
         impresionTexto1.setFont("Courier", 12)
 
-        for line in Texto1:
+        for line in Texto1.split("\n"):
             impresionTexto1.textLines(line)
-
-        #l = CleanString(Texto1, 50)
 
         pdf.drawText(impresionTexto1)
 
@@ -247,4 +245,4 @@ def Receta():
 
     ventanaRe.mainloop()
 
-#Receta()
+Receta()

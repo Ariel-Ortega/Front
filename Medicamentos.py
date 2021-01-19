@@ -73,7 +73,7 @@ def Medicamentos():
     marco_botonesMed = Frame(ventanaMed, bg="#0c3a56")
     marco_botonesMed.place(x=10, y=40, width=300, height=615)
 
-    marco_botonSalirM = Frame(ventanaMed, bg="white")
+    marco_botonSalirM = Frame(ventanaMed, bg="#0c3a56")
     marco_botonSalirM.place(x=1080, y=570, width=190, height=80)
 
     # Creación de los botones

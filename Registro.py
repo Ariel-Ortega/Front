@@ -31,22 +31,23 @@ def RegistroUsuario():
     etiqueta_Nombre = Label(marco_R, text="Contraseña", font=("Calibri light", 14, "bold"), fg="black",  bg="light gray")
     etiqueta_Nombre.place(x=70, y=210)
 
-    # Campos de texto
-    combo_TipoUsuario = ttk.Combobox(ventanaReg, state="readonly")
-    combo_TipoUsuario.place(x=230, y=150, width=350, height=35)
-    combo_TipoUsuario['values']=('root', 'admin', 'assistent')
+    def R_Datos(Nombre, Password, User):
+        # Campos de texto
+        combo_TipoUsuario = ttk.Combobox(ventanaReg, state="readonly")
+        combo_TipoUsuario.place(x=230, y=150, width=350, height=35)
+        combo_TipoUsuario['values']=('root', 'admin', 'assistent')
 
-    cajaTexto_Password = tkinter.Entry(marco_R, font=("Calibri light", 13), bg="white")
-    cajaTexto_Password.place(x=70, y=157, width=350, height=35)
+        cajaTexto_Password = tkinter.Entry(marco_R, font=("Calibri light", 13), bg="white")
+        cajaTexto_Password.place(x=70, y=157, width=350, height=35)
 
-    cajaTexto_Nombre = tkinter.Entry(marco_R, font=("Calibri light", 13), bg="white")
-    cajaTexto_Nombre.place(x=70, y=247, width=350, height=35)
+        cajaTexto_Nombre = tkinter.Entry(marco_R, font=("Calibri light", 13), bg="white")
+        cajaTexto_Nombre.place(x=70, y=247, width=350, height=35)
 
-    Nombre = cajaTexto_Nombre.get()
-    Password = cajaTexto_Password.get()
-    TipoU = combo_TipoUsuario.get()
+        Nombre = cajaTexto_Nombre.get()
+        Password = cajaTexto_Password.get()
+        TipoU = combo_TipoUsuario.get()
 
-    persona.CreateUser(Nombre, Password, TipoU)
+        persona.CreateUser(Nombre, Password, TipoU)
 
 
     boton_Reg = tkinter.Button(ventanaReg, text="Regístrarse", fg="white", bg="#722f37", font=("Monospaced", 12), activeforeground="grey", cursor="hand2", relief="flat", overrelief="flat")

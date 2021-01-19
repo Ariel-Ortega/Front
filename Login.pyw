@@ -34,8 +34,8 @@ lbl_usuario.place(x=40, y=210)
 cajaTexto1 = tkinter.Entry(marco_Log, font=("Calibri light", 15), bg="light blue")
 cajaTexto1.place(x=40, y=250, width=260, height=35)
 
-lbl_contraseña = Label(marco_Log, text="Contraseña", font=("Century Gothic", 15, "bold"), fg="black", bg="white")
-lbl_contraseña.place(x=40, y=310)
+lbl_contr = Label(marco_Log, text="Contraseña", font=("Century Gothic", 15, "bold"), fg="black", bg="white")
+lbl_contr.place(x=40, y=310)
 
 cajaTexto2 = tkinter.Entry(marco_Log, font=("Calibri light", 15), bg="light blue", show="*")
 cajaTexto2.place(x=40, y=350, width=260, height=35)
@@ -43,8 +43,8 @@ cajaTexto2.place(x=40, y=350, width=260, height=35)
 def insesion():
     C1 = cajaTexto1.get()
     C2 = cajaTexto2.get()
-    ty = ['user', 'root', 'admin']
-    persona.ValidUser(C1, C2, ty)
+    usuario = ['user', 'root', 'admin']
+
 
     if (cajaTexto1.get()=="" or cajaTexto2.get()==""):
         messagebox.showerror("¡Error!", "Llene todos los campos requeridos")
@@ -59,7 +59,7 @@ def insesion():
 def Ventana_Citas():
     ventana.withdraw()
     import Citas as C
-    C.firstwindow(user='admin')
+    C.firstwindow(user='user')
 
 def Ventana_Registrarse():
     import Registro as Re
