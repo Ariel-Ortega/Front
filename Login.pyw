@@ -43,16 +43,14 @@ cajaTexto2.place(x=40, y=350, width=260, height=35)
 def insesion():
     C1 = cajaTexto1.get()
     C2 = cajaTexto2.get()
-    usuario = ['user', 'root', 'admin']
 
 
     if (cajaTexto1.get()=="" or cajaTexto2.get()==""):
         messagebox.showerror("¡Error!", "Llene todos los campos requeridos")
-    elif (cajaTexto1.get()==C1 and cajaTexto2.get()==C2):
+    elif (cajaTexto1.get()=="ABCDEF" and cajaTexto2.get()=="12345"):
         messagebox.showinfo("¡Bienvenido!", cajaTexto1.get())
         ventana.withdraw()
         Ventana_Citas()
-
     else:
         messagebox.showerror("¡Error!", "Datos no válidos")
 
