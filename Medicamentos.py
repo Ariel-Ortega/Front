@@ -8,7 +8,7 @@ from PIL import ImageTk
 
 def Medicamentos():
     # Creación de la ventana en tamaño completo
-    ventanaMed = tkinter.Tk()
+    ventanaMed = tkinter.Toplevel()
     ventanaMed.title("Medicamentos")  # Título de la ventana
     ancho_valor = ventanaMed.winfo_screenwidth()  # Creo una variable que determine el ancho del monitor
     altura_valor = ventanaMed.winfo_screenheight()  # Creo una variable que determine el alto del monitor
@@ -21,13 +21,13 @@ def Medicamentos():
     etiqueta.config(font=("Arial", 30, "bold"), fg="white", bg="#0c3a56")
 
     #Imagen de fondo
-    fondo = ImageTk.PhotoImage(file="BMedicamentos.jpg")
-    lblFondo = Label(ventanaMed, image=fondo)
-    lblFondo.place(x=0, y=0, relwidth=1, relheight=1.3)
+    #fondo = ImageTk.PhotoImage(file="BMedicamentos.jpg")
+    #lblFondo = Label(ventanaMed, image=fondo)
+    #lblFondo.place(x=0, y=0, relwidth=1, relheight=1.3)
 
     # TABLA DE MEDICAMENTOS
     # Marco para colocar la tabla
-    marco_tablaH = Frame(bg="#0c3a56")
+    marco_tablaH = Frame(ventanaMed, bg="#0c3a56")
     marco_tablaH.place(x=400, y=150, width=550, height=250)  # Posición en x, posición en y, ancho, alto
 
     Label(marco_tablaH, text="ID", relief=RAISED, font=("Comic Sans MS", 11), bg="light gray", width=1, height=1).grid(
@@ -39,11 +39,8 @@ def Medicamentos():
         for j in range(2):
             l = Entry(marco_tablaH, text='', relief=GROOVE, font=("Comic Sans MS", 10), state=DISABLED).grid(row=i + 2, column=j, sticky=NSEW)
         # HORA Y FECHA
-    clock_frame = LabelFrame(bg="#0c3a56", relief=FLAT)  # Marco que contendrá la fecha y hora
+    clock_frame = LabelFrame(ventanaMed, bg="#0c3a56", relief=FLAT)  # Marco que contendrá la fecha y hora
     clock_frame.place(x=1100, y=15, width=200, height=60)
-
-    photo_frame = LabelFrame(bg="#0c3a56", relief=FLAT)  # Marco que contendrá la foto
-    photo_frame.place(x=1100, y=75, width=200, height=120)
 
     def update_clock():  # Función que actualiza la hora
         tiempo_actual = tkinter.Label(clock_frame, text=time.strftime('%H:%M:%S'), font=("Calibri light", 14),
@@ -67,11 +64,16 @@ def Medicamentos():
 
     update_date()
 
+    def SalirV_Med(): #Función salir, que rgeresa a la ventana de Citas
+        ventanaMed.withdraw()
+        import Citas as Cit
+        Cit.firstwindow('user')
+
     # Marcos para colocar los botones Agregar, Modificar, Eliminar, Salir
-    marco_botonesMed = Frame(bg="#0c3a56")
+    marco_botonesMed = Frame(ventanaMed, bg="#0c3a56")
     marco_botonesMed.place(x=10, y=40, width=300, height=615)
 
-    marco_botonSalirM = Frame(bg="white")
+    marco_botonSalirM = Frame(ventanaMed, bg="white")
     marco_botonSalirM.place(x=1080, y=570, width=190, height=80)
 
     # Creación de los botones
@@ -87,10 +89,10 @@ def Medicamentos():
                             activeforeground="grey", cursor="hand2")
     boton_eliminarM.place(x=100, y=450, width=100, height=40)
 
-    boton_salirM = Button(marco_botonSalirM, text="Salir", fg="white", bg="grey", font=("Monospaced", 15),
+    boton_salirM = Button(marco_botonSalirM, command=SalirV_Med, text="Salir", fg="white", bg="grey", font=("Monospaced", 15),
                            activeforeground="grey", cursor="hand2")
     boton_salirM.place(x=80, y=30, width=100, height=40)
 
     ventanaMed.mainloop()
 
-Medicamentos()
+#Medicamentos()

@@ -2,8 +2,8 @@ import tkinter
 from tkinter import messagebox
 from tkinter import *
 from PIL import ImageTk
-import Citas
 import User
+
 
 persona = User.User()
 
@@ -43,30 +43,33 @@ cajaTexto2.place(x=40, y=350, width=260, height=35)
 def insesion():
     C1 = cajaTexto1.get()
     C2 = cajaTexto2.get()
-    print(C1)
-    print(C2)
+    ty = ['user', 'root', 'admin']
+    persona.ValidUser(C1, C2, ty)
 
-    if (cajaTexto1.get()=="" or cajaTexto2.get()=="" ):
+    if (cajaTexto1.get()=="" or cajaTexto2.get()==""):
         messagebox.showerror("¡Error!", "Llene todos los campos requeridos")
-    elif (cajaTexto1.get()=="ABCDEF" and cajaTexto2.get()=="12345" ):
+    elif (cajaTexto1.get()==C1 and cajaTexto2.get()==C2):
         messagebox.showinfo("¡Bienvenido!", cajaTexto1.get())
-        ventana.destroy()
-        Citas.firstwindow(C1)
+        ventana.withdraw()
+        Ventana_Citas()
 
     else:
         messagebox.showerror("¡Error!", "Datos no válidos")
 
-def Registrarse():
-    ventana.destroy()
-    import Registro
+def Ventana_Citas():
+    ventana.withdraw()
+    import Citas as C
+    C.firstwindow(user='admin')
+
+def Ventana_Registrarse():
+    import Registro as Re
+    Re.RegistroUsuario()
+
 
 boton1 = tkinter.Button(text="Entrar", command=insesion,fg="white", bg="grey", font=("Monospaced", 15), activeforeground="grey", cursor="hand2")
 boton1.place(x=940, y=520)
 
-boton2 = tkinter.Button(text="Regístrarse", command=Registrarse, fg="grey", bg="white", font=("Monospaced", 12, "italic"), activeforeground="grey", cursor="hand2", relief="flat", overrelief="flat")
+boton2 = tkinter.Button(text="Regístrarse", command=Ventana_Registrarse, fg="grey", bg="white", font=("Monospaced", 12, "italic"), activeforeground="grey", cursor="hand2", relief="flat", overrelief="flat")
 boton2.place(x=915, y=443)
-
-boton3 = tkinter.Button(text="Olvidé mi contraseña", fg="grey", bg="white", font=("Monospaced", 12, "italic"), activeforeground="grey", cursor="hand2", relief="flat", overrelief="flat")
-boton3.place(x=888, y=470)
 
 ventana.mainloop()

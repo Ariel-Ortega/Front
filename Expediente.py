@@ -8,11 +8,11 @@ import time
 #Falta validar campos con el tipo de dato
 def Expediente():
     #Creación de la ventana en tamaño completo
-    ventanaEx = tkinter.Tk()
+    ventanaEx = tkinter.Toplevel()
     ventanaEx.title("Expedientes") # Título de la ventana
     ancho_valor = ventanaEx.winfo_screenwidth()# Creo una variable que determine el ancho del monitor
     altura_valor = ventanaEx.winfo_screenheight()# Creo una variable que determine el alto del monitor
-    ventanaEx.geometry("%dx%d+0+0"%(ancho_valor, altura_valor))# Paso como valor en ancho y alto al métod "geometry"
+    ventanaEx.geometry("%dx%d+0+0"%(ancho_valor, altura_valor))# Paso como valor en ancho y alto al método "geometry"
     ventanaEx.config(bg="#0c3a56")
 
     # Título que aparecerá en la ventana
@@ -296,9 +296,13 @@ def Expediente():
         c_AyS.delete(0, END)
         c_Signos.delete(0, END)
         c_Exploracion.delete(0, END)
+    def SalirV_Exp():
+        ventanaEx.withdraw()
+        import HistorialClinico as Hist
+        Hist.HistorialClinico()
 
     #Marco para los botones
-    marco_botones = Frame(bg="white")
+    marco_botones = Frame(ventanaEx, bg="white")
     marco_botones.place(x=950, y=300, width=350, height=300)
     marco_botones.config(bg="#0c3a56")
 
@@ -306,15 +310,15 @@ def Expediente():
                            activeforeground="grey", cursor="hand2", command=ImCampos)
     boton_guardar.place(x=130, y=30, width=100, height=40)
 
-    boton_salir = Button(marco_botones, text="Salir", fg="white", bg="grey", font=("Monospaced", 15), activeforeground="grey", cursor="hand2")
+    boton_salir = Button(marco_botones, command=SalirV_Exp, text="Salir", fg="white", bg="grey", font=("Monospaced", 15), activeforeground="grey", cursor="hand2")
     boton_salir.place(x=130, y=110, width=100, height=40)
 
-    boton_limpiar = Button(marco_botones, text="Limpiar", fg="white", bg="grey", font=("Monospaced", 15),
-                           activeforeground="grey", cursor="hand2", command=Limpiar)
+    boton_limpiar = Button(marco_botones, command=Limpiar, text="Limpiar", fg="white", bg="grey", font=("Monospaced", 15),
+                           activeforeground="grey", cursor="hand2")
     boton_limpiar.place(x=130, y=190, width=100, height=40)
 
 
     ventanaEx.mainloop()
 
 
-Expediente()
+#Expediente()

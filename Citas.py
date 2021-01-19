@@ -42,34 +42,39 @@ class firstwindow():
         photo_frame = LabelFrame(bg="#53CDB8", relief=FLAT)  # Marco que contendrá la foto
         photo_frame.place(x=1100, y=125, width=200, height=120)
 
-        def VHC():
-            root.destroy()
-            import HistorialClinico
-        def VMed():
-            root.destroy()
-            import Medicamentos
-        def Rec():
-            root.destroy()
-            import Receta
+        def AbrirV_HC():
+            root.withdraw()
+            import HistorialClinico as HistC
+            HistC.HistorialClinico()
+        def AbrirV_Medc():
+            root.withdraw()
+            import Medicamentos as Medcms
+            Medcms.Medicamentos()
+        def AbrirV_Rec():
+            root.withdraw()
+            import Receta as R
+            R.Receta()
         def Dat():
             import Dates
+        def CerrarV():
+            root.withdraw()
 
         # -----WIDGETS------
         Label(title_frame, text='CITAS', bg="#53CDB8", font=("Arial", 30, "bold")).grid(row=0, column=0)
 
-        expedientes_button = Button(buttons1_frame, text='Historiales Clínicos', width=20, command=VHC)
+        expedientes_button = Button(buttons1_frame, text='Historiales Clínicos', width=20, command=AbrirV_HC)
         expedientes_button.configure(bg="light pink", cursor='hand2', font=("Arial", "10", "normal"))
         expedientes_button.grid(row=0, column=0, padx=2, pady=3, sticky=W + E)
 
         Label(buttons1_frame, bg="#53CDB8").grid(row=2, column=0)
 
-        medicine_button = Button(buttons1_frame, text='Medicamentos', width=20, command=VMed)
+        medicine_button = Button(buttons1_frame, text='Medicamentos', width=20, command=AbrirV_Medc)
         medicine_button.configure(bg="light pink", cursor='hand2', font=("Arial", "10", "normal"))
         medicine_button.grid(row=3, column=0, padx=2, pady=3, sticky=W + E)
 
         Label(buttons1_frame, bg="#53CDB8").grid(row=4, column=0)
 
-        prescription_button = Button(buttons1_frame, text='Recetar', width=20, command=Rec)
+        prescription_button = Button(buttons1_frame, text='Recetar', width=20, command=AbrirV_Rec)
         prescription_button.configure(bg="light pink", cursor='hand2', font=("Arial", "10", "normal"))
         prescription_button.grid(row=5, column=0, padx=2, pady=3, sticky=W + E)
 
@@ -124,7 +129,7 @@ class firstwindow():
         delete_date_button.configure(bg="light pink", cursor='hand2', font=("Arial", "10", "normal"))
         delete_date_button.grid(row=0, column=1, padx=2, pady=3, sticky=W + E)
 
-        exit_button = Button(buttons2_frame, text='Salir', width=20)
+        exit_button = Button(buttons2_frame, command=CerrarV, text='Salir', width=20)
         exit_button.configure(bg="light pink", cursor='hand2', font=("Arial", "10", "normal"))
         exit_button.grid(row=0, column=2, padx=2, pady=3, sticky=W + E)
 

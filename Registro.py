@@ -3,7 +3,7 @@
 import tkinter
 from tkinter import messagebox
 from tkinter import *
-import time
+from tkinter import ttk
 from PIL import ImageTk
 import User
 
@@ -11,14 +11,14 @@ persona = User.User()# Objeto de tipo de persona
 
 def RegistroUsuario():
     # Creación de la ventana en tamaño completo
-    ventanaReg = tkinter.Tk()
+    ventanaReg = tkinter.Toplevel()
     ventanaReg.title("Registro de Usuario")  # Título de la ventana
     ventanaReg.geometry("800x600+280+50")  # Paso como valor en ancho y alto al método "geometry"
     ventanaReg.config(bg="#0c3a56")
     ventanaReg.resizable(0, 0)
 
     # Marco para el Registro
-    marco_R = Frame(bg="light grey")
+    marco_R = Frame(ventanaReg, bg="light grey")
     marco_R.place(x=160, y=80, width=480, height=380)
 
     # Etiquetas
@@ -32,8 +32,9 @@ def RegistroUsuario():
     etiqueta_Nombre.place(x=70, y=210)
 
     # Campos de texto
-    cajaTexto_TipoUsuario = tkinter.Entry(marco_R, font=("Calibri light", 13), bg="white")
-    cajaTexto_TipoUsuario.place(x=70, y=67, width=350, height=35)
+    combo_TipoUsuario = ttk.Combobox(ventanaReg, state="readonly")
+    combo_TipoUsuario.place(x=230, y=150, width=350, height=35)
+    combo_TipoUsuario['values']=('root', 'admin', 'assistent')
 
     cajaTexto_Password = tkinter.Entry(marco_R, font=("Calibri light", 13), bg="white")
     cajaTexto_Password.place(x=70, y=157, width=350, height=35)
@@ -43,14 +44,12 @@ def RegistroUsuario():
 
     Nombre = cajaTexto_Nombre.get()
     Password = cajaTexto_Password.get()
-    TipoU = cajaTexto_TipoUsuario.get()
+    TipoU = combo_TipoUsuario.get()
 
     persona.CreateUser(Nombre, Password, TipoU)
 
-    boton_Reg = tkinter.Button(text="Regístrarse", fg="white", bg="#722f37", font=("Monospaced", 12), activeforeground="grey", cursor="hand2", relief="flat", overrelief="flat")
+
+    boton_Reg = tkinter.Button(ventanaReg, text="Regístrarse", fg="white", bg="#722f37", font=("Monospaced", 12), activeforeground="grey", cursor="hand2", relief="flat", overrelief="flat")
     boton_Reg.place(x=350, y=490)
 
     ventanaReg.mainloop()
-
-
-RegistroUsuario()

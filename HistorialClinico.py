@@ -7,7 +7,7 @@ import time
 
 def HistorialClinico():
     # Creación de la ventana en tamaño completo
-    ventanaHC = tkinter.Tk()
+    ventanaHC = tkinter.Toplevel()
     ventanaHC.title("Historial Clínico")  # Título de la ventana
     ancho_valor = ventanaHC.winfo_screenwidth()  # Creo una variable que determine el ancho del monitor
     altura_valor = ventanaHC.winfo_screenheight()  # Creo una variable que determine el alto del monitor
@@ -15,13 +15,13 @@ def HistorialClinico():
     ventanaHC.config(bg="#0c3a56")
 
     # Título que aparecerá en la ventana
-    etiqueta = tkinter.Label(ventanaHC, text="Historial Clínico")
+    etiqueta = Label(ventanaHC, text="Historial Clínico")
     etiqueta.pack()
     etiqueta.config(font=("Arial", 30, "bold"), fg="white", bg="#0c3a56")
 
     # TABLA DEL HISTORIAL CLÍNICO
     #Marco para colocar la tabla
-    marco_tablaH = Frame(bg="#0c3a56")
+    marco_tablaH = Frame(ventanaHC, bg="#0c3a56")
     marco_tablaH.place(x=400, y=150, width=550, height=250)# Posición en x, posición en y, ancho, alto
 
     Label(marco_tablaH, text="ID", relief=RAISED, font=("Comic Sans MS", 11), bg="light gray", width=1, height=1).grid(row=0, column=0, sticky=NSEW)
@@ -32,10 +32,10 @@ def HistorialClinico():
             l = Entry(marco_tablaH, text='', relief=GROOVE, font=("Comic Sans MS", 10), state=DISABLED).grid(row=i + 2, column=j, sticky=NSEW)
 
     # HORA Y FECHA
-    clock_frame = LabelFrame(bg="#0c3a56", relief=FLAT)# Marco que contendrá la fecha y hora
+    clock_frame = LabelFrame(ventanaHC, bg="#0c3a56", relief=FLAT)# Marco que contendrá la fecha y hora
     clock_frame.place(x=1100, y=15, width=200, height=60)
 
-    photo_frame = LabelFrame(bg="#0c3a56", relief=FLAT)# Marco que contendrá la foto
+    photo_frame = LabelFrame(ventanaHC, bg="#0c3a56", relief=FLAT)# Marco que contendrá la foto
     photo_frame.place(x=1100, y=75, width=200, height=120)
 
     def update_clock():# Función que actualiza la hora
@@ -57,20 +57,26 @@ def HistorialClinico():
     update_date()
 
     # Marcos para colocar los botones Agregar, Modificar, Eliminar, Salir
-    marco_botonesHC = Frame(bg="#0c3a56")
+    marco_botonesHC = Frame(ventanaHC, bg="#0c3a56")
     marco_botonesHC.place(x=10, y=40, width=300, height=615)
 
-    marco_botonSalir = Frame(bg="#0c3a56")
+    marco_botonSalir = Frame(ventanaHC, bg="#0c3a56")
     marco_botonSalir.place(x=1080, y=570, width=250, height=100)
 
-    def VE():
-        ventanaHC.destroy()
-        import Expediente
+    def AbrirV_Expedientes():
+        ventanaHC.withdraw()
+        import Expediente as Exte
+        Exte.Expediente()
+
+    def SlirV_HC():
+        ventanaHC.withdraw()
+        import Citas as Cit
+        Cit.firstwindow('user')
 
     # Creación de los botones
 
-    boton_agregarHC = Button(marco_botonesHC, text="Agregar", fg="white", bg="grey", font=("Monospaced", 15), activeforeground="grey",
-                           cursor="hand2", command=VE)
+    boton_agregarHC = Button(marco_botonesHC, command=AbrirV_Expedientes, text="Agregar", fg="white", bg="grey", font=("Monospaced", 15), activeforeground="grey",
+                           cursor="hand2")
     boton_agregarHC.place(x=100, y=50, width=100, height=40)
 
     boton_modificarHC = Button(marco_botonesHC, text="Modificar", fg="white", bg="grey", font=("Monospaced", 15), activeforeground="grey", cursor="hand2")
@@ -79,9 +85,9 @@ def HistorialClinico():
     boton_eliminarHC = Button(marco_botonesHC, text="Eliminar", fg="white", bg="grey", font=("Monospaced", 15), activeforeground="grey", cursor="hand2")
     boton_eliminarHC.place(x=100, y=450, width=100, height=40)
 
-    boton_salirHC = Button(marco_botonSalir, text="Salir", fg="white", bg="grey", font=("Monospaced", 15), activeforeground="grey", cursor="hand2")
+    boton_salirHC = Button(marco_botonSalir, command=SlirV_HC, text="Salir", fg="white", bg="grey", font=("Monospaced", 15), activeforeground="grey", cursor="hand2")
     boton_salirHC.place(x=80, y=30, width=100, height=40)
 
     ventanaHC.mainloop()
 
-HistorialClinico()
+#HistorialClinico()

@@ -11,7 +11,7 @@ from reportlab.platypus import Image
 
 def Receta():
     #Creación de la ventana en tamaño completo
-    ventanaRe = tkinter.Tk()
+    ventanaRe = tkinter.Toplevel()
     ventanaRe.title("Recetas") # Título de la ventana
     ancho_valor = ventanaRe.winfo_screenwidth()# Creo una variable que determine el ancho del monitor
     altura_valor = ventanaRe.winfo_screenheight()# Creo una variable que determine el alto del monitor
@@ -24,10 +24,10 @@ def Receta():
     etiqueta.config(font=("Arial", 30, "bold"), fg="white",  bg="#0c3a56")
 
     # HORA Y FECHA
-    clock_frame = LabelFrame(bg="#0c3a56", relief=FLAT)  # Marco que contendrá la fecha y hora
+    clock_frame = LabelFrame(ventanaRe, bg="#0c3a56", relief=FLAT)  # Marco que contendrá la fecha y hora
     clock_frame.place(x=1100, y=15, width=200, height=60)
 
-    photo_frame = LabelFrame(bg="#0c3a56", relief=FLAT)  # Marco que contendrá la foto
+    photo_frame = LabelFrame(ventanaRe, bg="#0c3a56", relief=FLAT)  # Marco que contendrá la foto
     photo_frame.place(x=1100, y=75, width=200, height=120)
 
     def update_clock():  # Función que actualiza la hora
@@ -55,7 +55,7 @@ def Receta():
     # Creación de los diferentes campos
 
     # Marco que contendrá las etiquetas
-    marco_mayor = Frame(bg="#0c3a56")
+    marco_mayor = Frame(ventanaRe, bg="#0c3a56")
     marco_mayor.place(x=200, y=120, width=200, height=300)
     # Lista con el nombre o etiqueta de los distintos campos a llenar
     variable = ['Nombre del paciente', 'ID del paciente', 'Diagnóstico', 'Tratamiento', 'Indicaciones']
@@ -74,7 +74,7 @@ def Receta():
     etiquetasRec.place(x=0, y=250, width=200, height=40)
 
     # Marco que contendrá los campos
-    marco_camposRe = Frame(bg="#0c3a56")
+    marco_camposRe = Frame(ventanaRe, bg="#0c3a56")
     marco_camposRe.place(x=440, y=120, width=500, height=500)
 
     # Construcción de los campos
@@ -190,8 +190,10 @@ def Receta():
         impresionTexto1.setFillColor(colors.black)
         impresionTexto1.setFont("Courier", 12)
 
-        for line in Texto1.split(" "):
+        for line in Texto1:
             impresionTexto1.textLines(line)
+
+        #l = CleanString(Texto1, 50)
 
         pdf.drawText(impresionTexto1)
 
@@ -224,10 +226,14 @@ def Receta():
 
         pdf.save()
 
+    def SalirV_Rec():
+        ventanaRe.withdraw()
+        import Citas as Cit
+        Cit.firstwindow('user')
 
     # Botones
     # (Marco para los botones)
-    marco_botonesRe = Frame(bg="#0c3a56")
+    marco_botonesRe = Frame(ventanaRe, bg="#0c3a56")
     marco_botonesRe.place(x=1000, y=420, width=160, height=150)
 
     # (Creación de los botones)
@@ -235,10 +241,10 @@ def Receta():
                            activeforeground="grey", cursor="hand2", command=ImCamposRec)
     boton_guardarRe.place(x=30, y=30, width=100, height=40)
 
-    boton_salirRe = Button(marco_botonesRe, text="Salir", fg="white", bg="grey", font=("Monospaced", 15),
+    boton_salirRe = Button(marco_botonesRe, command=SalirV_Rec, text="Salir", fg="white", bg="grey", font=("Monospaced", 15),
                          activeforeground="grey", cursor="hand2")
     boton_salirRe.place(x=30, y=110, width=100, height=40)
 
     ventanaRe.mainloop()
 
-Receta()
+#Receta()
