@@ -44,7 +44,6 @@ def insesion():
     C1 = cajaTexto1.get()
     C2 = cajaTexto2.get()
 
-
     if (cajaTexto1.get()=="" or cajaTexto2.get()==""):
         messagebox.showerror("¡Error!", "Llene todos los campos requeridos")
     elif (cajaTexto1.get()=="ABCDEF" and cajaTexto2.get()=="12345"):

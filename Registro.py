@@ -31,26 +31,28 @@ def RegistroUsuario():
     etiqueta_Nombre = Label(marco_R, text="Contraseña", font=("Calibri light", 14, "bold"), fg="black",  bg="light gray")
     etiqueta_Nombre.place(x=70, y=210)
 
-    def R_Datos(Nombre, Password, User):
-        # Campos de texto
-        combo_TipoUsuario = ttk.Combobox(ventanaReg, state="readonly")
-        combo_TipoUsuario.place(x=230, y=150, width=350, height=35)
-        combo_TipoUsuario['values']=('root', 'admin', 'assistent')
+    # Campos de texto
+    combo_TipoUsuario = ttk.Combobox(ventanaReg, state="readonly")
+    combo_TipoUsuario.place(x=230, y=150, width=350, height=35)
+    combo_TipoUsuario['values']=('root', 'admin', 'assistent')
 
-        cajaTexto_Password = tkinter.Entry(marco_R, font=("Calibri light", 13), bg="white")
-        cajaTexto_Password.place(x=70, y=157, width=350, height=35)
+    cajaTexto_Password = tkinter.Entry(marco_R, font=("Calibri light", 13), bg="white")
+    cajaTexto_Password.place(x=70, y=157, width=350, height=35)
 
-        cajaTexto_Nombre = tkinter.Entry(marco_R, font=("Calibri light", 13), bg="white")
-        cajaTexto_Nombre.place(x=70, y=247, width=350, height=35)
+    cajaTexto_Nombre = tkinter.Entry(marco_R, font=("Calibri light", 13), bg="white")
+    cajaTexto_Nombre.place(x=70, y=247, width=350, height=35)
 
+    def FunR():
         Nombre = cajaTexto_Nombre.get()
         Password = cajaTexto_Password.get()
         TipoU = combo_TipoUsuario.get()
 
-        persona.CreateUser(Nombre, Password, TipoU)
+        #persona.CreateUser(Nombre, Password, TipoU)
 
+        if (combo_TipoUsuario.get()==TipoU and cajaTexto_Password.get()==Password and cajaTexto_Nombre.get()==Nombre):
+            messagebox.showinfo("Aviso", "Usuario Registrado")
 
-    boton_Reg = tkinter.Button(ventanaReg, text="Regístrarse", fg="white", bg="#722f37", font=("Monospaced", 12), activeforeground="grey", cursor="hand2", relief="flat", overrelief="flat")
+    boton_Reg = tkinter.Button(ventanaReg, text="Regístrarse", command=FunR, fg="white", bg="#722f37", font=("Monospaced", 12), activeforeground="grey", cursor="hand2", relief="flat", overrelief="flat")
     boton_Reg.place(x=350, y=490)
 
     ventanaReg.mainloop()
